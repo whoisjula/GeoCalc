@@ -1,0 +1,89 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    int radius;             // Holds radius
+    int base;               // Holds base
+    int length;             // Holds length
+    int height;             // Holds height
+    int width;              // Holds width
+    int choice;             // holds choice
+
+    // Variables for calculations
+    float cArea,
+           rArea,
+           tArea;
+    float Pi = 3.14159;
+    
+
+    
+    // Menu Constants
+    const int Circle_Area = 1,
+              Rectangle_Area = 2,
+              Triangle_Area = 3,
+              Quit_Program = 4;
+    
+    // Calculations
+    //cArea = Pi * radius * radius;
+    //rArea = length * width;
+    //tArea = base * height * .5;
+
+    // Display the menu
+    cout << "Geometry Calculator\n";
+    cout << "\t\t1. Calculate the Area of a Circle\n";
+    cout << "\t\t2. Calculate the Area of a Rectangle\n";
+    cout << "\t\t3. Calculate the Area of a Triangle\n";
+    cout << "\t\t4. Quit\n\n";
+    cout << "\t\tEnter your choice: \n";
+    cin >> choice;
+
+    // Set output formatting
+    cout << fixed << showpoint << setprecision(2);
+
+    // Menu choice response
+    if (choice == 1)
+    {
+        cout << "You chose to Calculate the Area of a circle.\n";
+        cout << "Enter the circle's radius: ";
+        cin >> radius;
+        cArea = Pi * radius * radius;
+        cout << "The circle's area is " << cArea << endl;
+    }
+
+    else if (choice == 2)
+    {
+        cout << "You chose to Calculate the Area of a Rectangle.\n";
+        cout << "Enter the rectangle's length: ";
+        cin >> length;
+        cout << "Enter the rectangle's width ";
+        cin >> width;
+        rArea = length * width;
+        cout << "The rectangle's area is " << rArea << endl;
+    }
+
+    else if (choice == 3)
+    {
+        cout << "You chose to Calculte the Area of a Triange.\n";
+        cout << "Enter the triangle's base: ";
+        cin >> base;
+        cout << "Enter the triangle's height: ";
+        cin >> height;
+        tArea = base * height * .5;
+        cout << "The triangles height is " << tArea << endl;
+    }
+
+    else if (choice == 4)
+    {
+        cout << "The program is ending now...\n";
+    }
+
+    else
+    {
+        cout << "The valid choices are 1 through 4.\n";
+        cout << "Please enter a valid choice.\n";
+    }
+    return 0;
+}
